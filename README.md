@@ -243,19 +243,21 @@ android {
 val engine = AiKitEngine.create(context)
 
 engine.loadModel(modelFilePath, object : AiKitEngine.ModelStateListener {
-    override fun onModelLoading() {
-
-    }
-    override fun onModelLoaded() {
-
-    }
-    override fun onModelError(error: Throwable) {
-
-    }
-    override fun onModelUnloaded() {
-
-    }
+    override fun onModelLoading() { /* Show loading */ }
+    override fun onModelLoaded() { /* Ready to chat */ }
+    override fun onModelError(error: Throwable) { /* Handle error */ }
+    override fun onModelUnloaded() { /* Cleanup */ }
 })
+```
+
+### Check and manage model state
+
+```kotlin
+val isLoaded = engine.isModelLoaded()
+
+val path = engine.currentModelPath()
+
+engine.unloadModel()
 ```
 
 ### Send a message and stream the response
@@ -264,11 +266,11 @@ engine.loadModel(modelFilePath, object : AiKitEngine.ModelStateListener {
 val chat = engine.chat()
 
 chat.sendMessage(prompt, listener = object : AiKitChat.ChatListener {
-    override fun onGenerationStarted() { }
-    override fun onToken(token: String) { }
-    override fun onGenerationComplete(fullResponse: String) { }
-    override fun onGenerationError(error: Throwable) { }
-    override fun onCancelled() { }
+    override fun onGenerationStarted() { /* Show loading */ }
+    override fun onToken(token: String) { /* Update UI */ }
+    override fun onGenerationComplete(fullResponse: String) { /* Display final response */ }
+    override fun onGenerationError(error: Throwable) { /* Handle error */ }
+    override fun onCancelled() { /* Generation cancelled */ }
 })
 ```
 
