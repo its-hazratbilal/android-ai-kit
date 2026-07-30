@@ -311,6 +311,8 @@ AiKit works with **GGUF models supported by `llama.cpp`**, including:
 
 Contributions are always welcome!
 
+If you'd like to improve the project:
+
 1. Fork the repository
 2. Create a feature branch
 
@@ -324,7 +326,13 @@ git checkout -b feature/my-feature
 git commit -m "Add amazing feature"
 ```
 
-4. Push the branch and open a Pull Request
+4. Push the branch
+
+```bash
+git push origin feature/my-feature
+```
+
+5. Open a Pull Request
 
 ---
 
