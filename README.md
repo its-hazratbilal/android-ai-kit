@@ -9,7 +9,6 @@
   <img src="https://img.shields.io/github/license/its-hazratbilal/android-ai-kit?style=for-the-badge"/>
   <img src="https://img.shields.io/github/last-commit/its-hazratbilal/android-ai-kit?style=for-the-badge"/>
   <img src="https://img.shields.io/github/issues/its-hazratbilal/android-ai-kit?style=for-the-badge"/>
-  <img src="https://img.shields.io/jitpack/v/its-hazratbilal/android-ai-kit?style=for-the-badge"/>
 </p>
 
 <p align="center">
@@ -19,10 +18,10 @@
 
 <p align="center">
 <img src="https://img.shields.io/badge/Kotlin-7F52FF?style=for-the-badge&logo=kotlin&logoColor=white"/>
+<img src="https://img.shields.io/badge/Jetpack%20Compose-4285F4?style=for-the-badge&logo=android&logoColor=white"/>  
+<img src="https://img.shields.io/badge/Modular-Architecture-00C853?style=for-the-badge"/>  
 <img src="https://img.shields.io/badge/llama.cpp-LLM-000000?style=for-the-badge"/>
 <img src="https://img.shields.io/badge/C%2B%2B-JNI-00599C?style=for-the-badge&logo=cplusplus&logoColor=white"/>
-<img src="https://img.shields.io/badge/Coroutines-Flow-4285F4?style=for-the-badge"/>
-<img src="https://img.shields.io/badge/Modular-Architecture-00C853?style=for-the-badge"/>
 </p>
 
 ---
