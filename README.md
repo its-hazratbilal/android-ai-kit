@@ -18,7 +18,6 @@
 
 <p align="center">
 <img src="https://img.shields.io/badge/Kotlin-7F52FF?style=for-the-badge&logo=kotlin&logoColor=white"/>
-<img src="https://img.shields.io/badge/Jetpack%20Compose-4285F4?style=for-the-badge&logo=android&logoColor=white"/>  
 <img src="https://img.shields.io/badge/Modular-Architecture-00C853?style=for-the-badge"/>  
 <img src="https://img.shields.io/badge/llama.cpp-LLM-000000?style=for-the-badge"/>
 <img src="https://img.shields.io/badge/C%2B%2B-JNI-00599C?style=for-the-badge&logo=cplusplus&logoColor=white"/>
@@ -54,19 +53,6 @@ Every inference runs **entirely on-device**. No network calls, no API keys, no d
 
 ---
 
-## ✨ Features
-
-- On-device LLM inference
-- GGUF model support
-- Streaming responses
-- Kotlin-first API
-- Modular architecture
-- No cloud dependency
-- JNI handled internally
-- Thread-safe model loading
-
----
-
 ## 🎥 Demo
 
 > **🎬 Sample App Demo**
@@ -81,7 +67,7 @@ Every inference runs **entirely on-device**. No network calls, no API keys, no d
 - 🧩 **Modular by design** — pull in only the capability you need (`core`, `chat`, more coming)
 - 🎯 **Minimal public API** — call to load a model and start chatting
 - 🔄 **Streaming-first** — token-by-token callbacks for real-time UI updates
-- 🪶 **DI-framework agnostic** — no Hilt/Koin forced on consumers; plain constructors and factory methods
+- 🔧 **DI-framework agnostic** — no Hilt/Koin forced on consumers; plain constructors and factory methods
 - 📦 **Distributed via JitPack** — no manual AAR wrangling
 
 ---
@@ -152,7 +138,8 @@ android-ai-kit
 │   │   └── internal
 │   ├── manager
 │   ├── model
-│   └── AiKitEngine.kt
+│   ├── AiKitEngine.kt
+│   └── InternalAiKitApi.kt
 │
 ├── chat
 │   ├── AiKitChat.kt
@@ -177,7 +164,7 @@ android-ai-kit
 | **core / manager** | Model lifecycle, state transitions, error recovery |
 | **core / gguf** | GGUF file metadata reading |
 | **core / model** | Request/response data classes |
-| **chat** | Stateless chat API, streaming callbacks |
+| **chat** | Stateless chat API, streaming callbacks, and the `engine.chat()` extension entry point |
 | **sample** | Minimal reference app demonstrating the library end-to-end |
 
 ---
@@ -396,4 +383,4 @@ See the [LICENSE](LICENSE) file for details.
 
 ---
 
-Built with ❤️ using Kotlin, Jetpack Compose, and llama.cpp
+Built with ❤️ using Kotlin, Coroutines, and llama.cpp
