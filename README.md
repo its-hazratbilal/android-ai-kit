@@ -394,6 +394,4 @@ See the [LICENSE](LICENSE) file for details.
 
 ---
 
-<p align="center">
 Built with ❤️ using Kotlin, Jetpack Compose, and llama.cpp
-</p>
