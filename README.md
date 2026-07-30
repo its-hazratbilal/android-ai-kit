@@ -49,9 +49,22 @@
 
 **AiKit** is a modular Android library that brings on-device LLM inference to any Android app with a small, clean Kotlin API.
 
-It's extracted from [Offline AI Assistant](https://github.com/its-hazratbilal/offline-ai-assistant), a production Android app running fully offline GGUF language models — and re-packaged as a standalone, reusable library so any Android developer can add on-device AI to their own app without writing JNI, managing llama.cpp's lifecycle, or handling native backend loading themselves.
+It's extracted from [Offline AI Assistant](https://github.com/its-hazratbilal/offline-ai-assistant), a production Android app that runs GGUF-based Large Language Models (LLMs) entirely on-device. It has been repackaged as a standalone, reusable library, enabling Android developers to integrate on-device LLM inference into their apps without writing JNI code, managing llama.cpp's lifecycle, or handling native backend loading.
 
 Every inference runs **entirely on-device**. No network calls, no API keys, no data leaving the phone.
+
+---
+
+## ✨ Features
+
+- On-device LLM inference
+- GGUF model support
+- Streaming responses
+- Kotlin-first API
+- Modular architecture
+- No cloud dependency
+- JNI handled internally
+- Thread-safe model loading
 
 ---
 
@@ -177,6 +190,8 @@ android-ai-kit
 - **Stateless chat** — no history/session management inside the library; consumers own that layer
 - **Streaming-native** — every generation call exposes a token `Flow` under the hood
 
+AiKit focuses solely on on-device LLM inference. Conversation history, prompt management, RAG pipelines, persistence, authentication, and UI remain the responsibility of the host application.
+
 ---
 
 ## 🚀 Getting Started
@@ -266,7 +281,21 @@ A full working example — including a `.gguf` file picker and a streaming chat 
 | Android Version | Android 11 (API 30)+ |
 | RAM | 4 GB minimum (8 GB recommended for larger models) |
 | Storage | Depends on chosen GGUF model size |
-| NDK / CMake | Required to build from source |
+
+---
+
+## 🧠 Supported Models
+
+AiKit works with **GGUF models supported by `llama.cpp`**, including:
+
+- **Gemma**
+- **Llama**
+- **Qwen**
+- **Phi**
+- **TinyLlama**
+- **Mistral**
+
+> **Note:** Model compatibility depends on the version of `llama.cpp` bundled with AiKit. Any GGUF model supported by that version of `llama.cpp` should work.
 
 ---
 
@@ -326,7 +355,7 @@ git commit -m "Add amazing feature"
 
 **Hazrat Bilal**  
 Senior Android Engineer  
-Kotlin • Jetpack Compose • MVVM • Clean Architecture • Kotlin Multiplatform (KMP)
+Kotlin • Jetpack Compose • MVVM • Clean Architecture • Kotlin Multiplatform (KMP), Flutter
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-Visit%20Website-0A66C2?style=flat&logo=googlechrome&logoColor=white)](https://hazratbilal.com)
 [![GitHub](https://img.shields.io/badge/GitHub-its--hazratbilal-181717?style=flat&logo=github)](https://github.com/its-hazratbilal)
