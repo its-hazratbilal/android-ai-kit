@@ -1,3 +1,5 @@
+@file:OptIn(InternalAiKitApi::class)
+
 package com.hazratbilal.aikit.core
 
 import android.content.Context
@@ -43,8 +45,11 @@ class AiKitEngine private constructor(
     // the same instance.
     private val llmEngine = LlamaCppEngine.getInstance(appContext)
 
-    // Internal so :chat module can reach it via `api(project(":core"))`,
-    // without exposing ModelManager to external consumers of the library.
+    // Public only so the :chat module can reach it across the Gradle module
+    // boundary — `internal` doesn't propagate between separate modules, even
+    // with an `api(project(":core"))` dependency. Guarded by @InternalAiKitApi
+    // so external consumers get a compile error if they try to use it.
+    @InternalAiKitApi
     val modelManager = ModelManager(llmEngine)
 
     /**
@@ -57,7 +62,7 @@ class AiKitEngine private constructor(
         loadJob = engineScope.launch {
             try {
                 listener.onModelLoading()
-                modelManager.loadModel(modelPath)
+                loadModelInternal(modelPath)
                 listener.onModelLoaded()
             } catch (t: Throwable) {
                 listener.onModelError(t)
@@ -65,16 +70,22 @@ class AiKitEngine private constructor(
         }
     }
 
+    @OptIn(InternalAiKitApi::class)
+    private suspend fun loadModelInternal(modelPath: String) = modelManager.loadModel(modelPath)
+
     /** Unloads the currently loaded model, freeing native memory. */
+    @OptIn(InternalAiKitApi::class)
     fun unloadModel() {
         loadJob?.cancel()
         modelManager.unload()
     }
 
     /** Returns true if a model is currently loaded and ready for inference. */
+    @OptIn(InternalAiKitApi::class)
     fun isModelLoaded(): Boolean = modelManager.isLoaded()
 
     /** Returns the file path of the currently loaded model, or null if none is loaded. */
+    @OptIn(InternalAiKitApi::class)
     fun currentModelPath(): String? = modelManager.currentModelPath()
 
     companion object {

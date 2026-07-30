@@ -1,6 +1,9 @@
+@file:OptIn(InternalAiKitApi::class)
+
 package com.hazratbilal.aikit.chat
 
 import com.hazratbilal.aikit.core.AiKitEngine
+import com.hazratbilal.aikit.core.InternalAiKitApi
 import com.hazratbilal.aikit.core.model.LlmRequest
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -37,6 +40,7 @@ class AiKitChat internal constructor(private val engine: AiKitEngine) {
      *
      * Note: [maxTokens] matches [LlmRequest]'s default of 512.
      */
+    @OptIn(InternalAiKitApi::class)
     fun sendMessage(
         prompt: String,
         maxTokens: Int = 512,

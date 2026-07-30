@@ -100,7 +100,7 @@ class ChatViewModel(application: Application) : AndroidViewModel(application) {
 
     private fun copyUriToInternalStorage(uri: Uri): File {
         val context = getApplication<Application>()
-        val destFile = File(context.filesDir, "loaded_model.gguf")
+        val destFile = File(context.filesDir, "model_${System.currentTimeMillis()}.gguf")
 
         context.contentResolver.openInputStream(uri)?.use { input ->
             FileOutputStream(destFile).use { output ->
