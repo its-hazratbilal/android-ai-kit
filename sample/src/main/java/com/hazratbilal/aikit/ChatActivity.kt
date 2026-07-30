@@ -144,7 +144,7 @@ private fun ModelPickerSection(
                         is ModelState.NotLoaded -> "No model loaded"
                         is ModelState.Loading -> "Loading model..."
                         is ModelState.Loaded -> modelState.displayName
-                        is ModelState.Error -> "Error: ${modelState.message}"
+                        is ModelState.Error -> modelState.message
                     },
                     modifier = Modifier.padding(end = 4.dp),
                     style = MaterialTheme.typography.bodyMedium,
