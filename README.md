@@ -79,7 +79,7 @@ Every inference runs **entirely on-device**. No network calls, no API keys, no d
 
 - 🧠 **On-device inference** — powered by `llama.cpp`, no cloud dependency
 - 🧩 **Modular by design** — pull in only the capability you need (`core`, `chat`, more coming)
-- 🎯 **Minimal public API** — two or three calls to load a model and start chatting
+- 🎯 **Minimal public API** — call to load a model and start chatting
 - 🔄 **Streaming-first** — token-by-token callbacks for real-time UI updates
 - 🪶 **DI-framework agnostic** — no Hilt/Koin forced on consumers; plain constructors and factory methods
 - 📦 **Distributed via JitPack** — no manual AAR wrangling
@@ -155,7 +155,8 @@ android-ai-kit
 │   └── AiKitEngine.kt
 │
 ├── chat
-│   └── AiKitChat.kt
+│   ├── AiKitChat.kt
+│   └── AiKitEngineExtensions.kt
 │
 ├── sample
 │   ├── model
@@ -189,7 +190,7 @@ android-ai-kit
 - **Stateless chat** — no history/session management inside the library; consumers own that layer
 - **Streaming-native** — every generation call exposes a token `Flow` under the hood
 
-AiKit focuses solely on on-device LLM inference. Conversation history, prompt management, RAG pipelines, persistence, authentication, and UI remain the responsibility of the host application.
+AiKit focuses solely on on-device LLM inference. Conversation history, prompt management, persistence, and UI remain the responsibility of the host application.
 
 ---
 
@@ -242,10 +243,18 @@ android {
 val engine = AiKitEngine.create(context)
 
 engine.loadModel(modelFilePath, object : AiKitEngine.ModelStateListener {
-    override fun onModelLoading() { }
-    override fun onModelLoaded() { }
-    override fun onModelError(error: Throwable) { }
-    override fun onModelUnloaded() { }
+    override fun onModelLoading() {
+
+    }
+    override fun onModelLoaded() {
+
+    }
+    override fun onModelError(error: Throwable) {
+
+    }
+    override fun onModelUnloaded() {
+
+    }
 })
 ```
 
@@ -337,7 +346,7 @@ git commit -m "Add amazing feature"
 - 📦 Native C++ integration through **JNI**, including dynamic CPU backend loading
 - 🧩 Clean public API design — restricted constructors, extension-function entry points
 - ⚡ Streaming architecture with **Kotlin Coroutines & Flow**
-- 🪶 Framework-agnostic library design (no forced DI, no forced persistence layer)
+- 🔧 Framework-agnostic library design (no forced DI, no forced persistence layer)
 - 🚀 Distribution via **JitPack**
 
 ---
@@ -354,7 +363,7 @@ git commit -m "Add amazing feature"
 
 **Hazrat Bilal**  
 Senior Android Engineer  
-Kotlin • Jetpack Compose • MVVM • Clean Architecture • Kotlin Multiplatform (KMP), Flutter
+Kotlin • Jetpack Compose • MVVM • Clean Architecture • Kotlin Multiplatform (KMP) • Flutter
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-Visit%20Website-0A66C2?style=flat&logo=googlechrome&logoColor=white)](https://hazratbilal.com)
 [![GitHub](https://img.shields.io/badge/GitHub-its--hazratbilal-181717?style=flat&logo=github)](https://github.com/its-hazratbilal)
@@ -364,22 +373,27 @@ Kotlin • Jetpack Compose • MVVM • Clean Architecture • Kotlin Multiplatf
 
 ## ⭐ Support
 
-If you found this project useful, please consider:
+If you found this project useful, please consider supporting it by:
 
 - ⭐ Starring the repository
 - 🍴 Forking the project
 - 🐛 Reporting bugs
 - 💡 Suggesting new features
-- 📢 Sharing it with other Android developers
+- 🔀 Opening Pull Requests
+- 📢 Sharing the project with other Android developers
+
+Every contribution and star helps the project grow.
 
 ---
 
 ## 📄 License
 
-This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
+This project is licensed under the **MIT License**.
+
+See the [LICENSE](LICENSE) file for details.
 
 ---
 
 <p align="center">
-Built with ❤️ using Kotlin, Coroutines, and llama.cpp
+Built with ❤️ using Kotlin, Jetpack Compose, and llama.cpp
 </p>
