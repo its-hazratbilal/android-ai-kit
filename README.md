@@ -311,7 +311,7 @@ AiKit works with **GGUF models supported by `llama.cpp`**, including:
 
 Contributions are always welcome!
 
-If you'd like to improve the project:
+If you'd like to improve the library:
 
 1. Fork the repository
 2. Create a feature branch
