@@ -370,14 +370,14 @@ Kotlin • Jetpack Compose • MVVM • Clean Architecture • Kotlin Multiplatf
 
 ## ⭐ Support
 
-If you found this project useful, please consider supporting it by:
+If you found this library useful, please consider supporting it by:
 
 - ⭐ Starring the repository
-- 🍴 Forking the project
+- 🍴 Forking the library
 - 🐛 Reporting bugs
 - 💡 Suggesting new features
 - 🔀 Opening Pull Requests
-- 📢 Sharing the project with other Android developers
+- 📢 Sharing the library with other Android developers
 
 Every contribution and star helps the project grow.
 
