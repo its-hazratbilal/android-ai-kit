@@ -69,7 +69,7 @@ dependencies {
     debugImplementation(libs.androidx.compose.ui.test.manifest)
     debugImplementation(libs.androidx.compose.ui.tooling)
 
-    // Markdown Renderer for AI response
+    // Markdown rendering for AI-generated responses
     implementation(libs.markdown.renderer)
     implementation(libs.markdown.renderer.m3)
 
