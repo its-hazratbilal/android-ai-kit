@@ -41,10 +41,7 @@ afterEvaluate {
     publishing {
         publications {
             register<MavenPublication>("release") {
-                groupId = "com.github.its-hazratbilal"
                 artifactId = "android-ai-kit-chat"
-                version = "1.0.0"
-
                 from(components["release"])
             }
         }
