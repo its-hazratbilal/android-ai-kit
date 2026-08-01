@@ -1,8 +1,5 @@
 <h1 align="center">🧩 AiKit — On-Device LLM Library for Android</h1>
 
-
-# 🧩 AiKit — On-Device LLM Library for Android
-
 <p align="center">
   <img src="./screenshots/logo.png" width="150" alt="AiKit Logo"/>
 </p>
