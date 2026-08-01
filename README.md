@@ -29,6 +29,7 @@
 
 - [📱 Overview](#-overview)
 - [🎥 Demo](#-demo)
+- [🖼️ Screenshots](#-screenshots)
 - [✨ Why AiKit](#-why-aikit)
 - [📦 Modules](#-modules)
 - [🛠 Tech Stack](#-tech-stack)
