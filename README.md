@@ -1,3 +1,9 @@
+<h1 align="center">Android AI Kit</h1>
+
+<p align="center">
+  🧩 AiKit — On-Device LLM Library for Android
+</p>
+
 # 🧩 AiKit — On-Device LLM Library for Android
 
 <p align="center">
