@@ -50,6 +50,10 @@ class ChatViewModel(application: Application) : AndroidViewModel(application) {
         _uiState.update { it.copy(modelState = ModelState.Loading) }
 
         viewModelScope.launch {
+            if (engine.isModelLoaded()) {
+                engine.unloadModel()
+            }
+
             val destFile = try {
                 withContext(Dispatchers.IO) {
                     copyUriToInternalStorage(uri)
@@ -100,7 +104,11 @@ class ChatViewModel(application: Application) : AndroidViewModel(application) {
 
     private fun copyUriToInternalStorage(uri: Uri): File {
         val context = getApplication<Application>()
-        val destFile = File(context.filesDir, "model_${System.currentTimeMillis()}.gguf")
+        val destFile = File(context.filesDir, "model.gguf")
+
+        if (destFile.exists()) {
+            destFile.delete()
+        }
 
         context.contentResolver.openInputStream(uri)?.use { input ->
             FileOutputStream(destFile).use { output ->

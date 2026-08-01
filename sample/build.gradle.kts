@@ -11,6 +11,8 @@ android {
         }
     }
 
+    ndkVersion = "29.0.13113456"
+
     defaultConfig {
         applicationId = "com.hazratbilal.aikit"
         minSdk = 30
