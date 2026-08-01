@@ -1,4 +1,4 @@
-# 🧩 AiKit — On-Device LLM Toolkit for Android
+# 🧩 AiKit — On-Device LLM Library for Android
 
 <p align="center">
   <img src="./screenshots/logo.png" width="150" alt="AiKit Logo"/>
