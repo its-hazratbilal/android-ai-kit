@@ -56,7 +56,7 @@ Every inference runs **entirely on-device**. No network calls, no API keys, no d
 
 ## 🎥 Demo
 
-> **🎬 Sample App Demo**
+> **🎬 Sample App**
 
 https://github.com/user-attachments/assets/6a5c9910-5d62-407f-bd7e-3d5162afe8b6
 
