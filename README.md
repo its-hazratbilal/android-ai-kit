@@ -339,7 +339,7 @@ git push origin feature/my-feature
 - 🧩 Clean public API design — restricted constructors, extension-function entry points
 - ⚡ Streaming architecture with **Kotlin Coroutines & Flow**
 - 🔧 Framework-agnostic library design (no forced DI, no forced persistence layer)
-- 🚀 Distribution via **JitPack**
+- 🚀 Publishing to **Maven Central**
 
 ---
 
