@@ -1,7 +1,7 @@
-# 🧩 AiKit — On-Device LLM Toolkit for Android
+<h1 align="center">🧩 AiKit — On-Device LLM Library for Android</h1>
 
 <p align="center">
-  <img src="./screenshots/logo.png" width="140" alt="AiKit Logo"/>
+  <img src="./screenshots/logo.png" width="150" alt="AiKit Logo"/>
 </p>
 
 <p align="center">
@@ -29,6 +29,7 @@
 
 - [📱 Overview](#-overview)
 - [🎥 Demo](#-demo)
+- [🖼️ Screenshots](#-screenshots)
 - [✨ Why AiKit](#-why-aikit)
 - [📦 Modules](#-modules)
 - [🛠 Tech Stack](#-tech-stack)
@@ -55,9 +56,19 @@ Every inference runs **entirely on-device**. No network calls, no API keys, no d
 
 ## 🎥 Demo
 
-> **🎬 Sample App Demo**
+> **🎬 Sample App**
 
-*(add your sample app screen recording / GIF here)*
+https://github.com/user-attachments/assets/6a5c9910-5d62-407f-bd7e-3d5162afe8b6
+
+---
+
+## 📸 Screenshots
+
+<p align="center">
+  <img src="./screenshots/screenshot-1.jpg" width="200" alt="screenshot-1"/>
+  <img src="./screenshots/screenshot-2.jpg" width="200" alt="screenshot-2"/>
+  <img src="./screenshots/screenshot-3.jpg" width="200" alt="screenshot-3"/>
+</p>
 
 ---
 
