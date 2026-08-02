@@ -192,7 +192,7 @@ AiKit focuses solely on on-device LLM inference. Conversation history, prompt ma
 
 ## 🚀 Getting Started
 
-### Add the dependency
+### Add the dependencies
 
 ```kotlin
 // app/build.gradle.kts
