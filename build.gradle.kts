@@ -5,6 +5,6 @@ plugins {
 }
 
 allprojects {
-    group = "com.github.its-hazratbilal"
+    group = "io.github.its-hazratbilal"
     version = "1.0.0"
 }

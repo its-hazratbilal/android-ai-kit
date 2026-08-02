@@ -1,6 +1,0 @@
-before_install:
-  - yes | sdkmanager --licenses || true
-  - sdkmanager --install "ndk;29.0.13113456"
-  - sdkmanager --install "cmake;3.31.6"
-jdk:
-  - openjdk17
