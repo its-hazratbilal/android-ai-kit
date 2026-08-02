@@ -92,8 +92,6 @@ https://github.com/user-attachments/assets/6a5c9910-5d62-407f-bd7e-3d5162afe8b6
 | `android-ai-kit-rag` *(planned)* | Retrieval-augmented generation — embeddings + vector search |
 | `android-ai-kit-vision` *(planned)* | Multimodal / image-input support |
 
-Each capability module depends only on `core` and exposes it transitively — so adding just the capability module you need (e.g. `android-ai-kit-chat`) is enough; you don't need to add `core` separately unless you want model loading without any capability module on top.
-
 ---
 
 ## 🛠 Tech Stack
@@ -194,19 +192,15 @@ AiKit focuses solely on on-device LLM inference. Conversation history, prompt ma
 
 ## 🚀 Getting Started
 
-### Core (Model Loading)
+### Add the dependency
 
 ```kotlin
-implementation("io.github.its-hazratbilal:android-ai-kit-core:1.0.0")
+// app/build.gradle.kts
+dependencies {
+    implementation("io.github.its-hazratbilal:android-ai-kit-core:1.0.0")
+    implementation("io.github.its-hazratbilal:android-ai-kit-chat:1.0.0")
+}
 ```
-
-### Chat API
-
-```kotlin
-implementation("io.github.its-hazratbilal:android-ai-kit-chat:1.0.0")
-```
-
-> `android-ai-kit-chat` transitively includes `android-ai-kit-core` — if you're using chat, you only need to declare the chat dependency. Add `android-ai-kit-core` on its own only if you need model loading without the chat API.
 
 ### Required app-level packaging config
 
