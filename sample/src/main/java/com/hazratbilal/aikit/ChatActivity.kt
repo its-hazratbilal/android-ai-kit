@@ -88,7 +88,7 @@ fun ChatScreen(viewModel: ChatViewModel = viewModel()) {
         modifier = Modifier.fillMaxSize(),
         contentWindowInsets = WindowInsets.safeDrawing.exclude(WindowInsets.ime),
         topBar = {
-            TopAppBar(title = { Text("AiKit Sample App") })
+            TopAppBar(title = { Text("AiKit Sample") })
         }
     ) { innerPadding ->
         Column(
