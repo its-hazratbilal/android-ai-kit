@@ -1,8 +1,6 @@
-import org.gradle.api.publish.maven.MavenPublication
-
 plugins {
     alias(libs.plugins.android.library)
-    id("maven-publish")
+    alias(libs.plugins.maven.publish)
 }
 
 android {
@@ -71,16 +69,38 @@ android {
             withSourcesJar()
         }
     }
-
 }
 
-afterEvaluate {
-    publishing {
-        publications {
-            register<MavenPublication>("release") {
-                artifactId = "android-ai-kit-core"
-                from(components["release"])
+mavenPublishing {
+    publishToMavenCentral()
+    signAllPublications()
+
+    coordinates(
+        project.group.toString(),
+        "android-ai-kit-core"
+    )
+
+    pom {
+        name.set("AiKit Core")
+        description.set("Core module for AiKit. Provides GGUF model loading, lifecycle management, and the JNI bridge to llama.cpp for on-device LLM inference.")
+        url.set("https://github.com/its-hazratbilal/android-ai-kit")
+        licenses {
+            license {
+                name.set("MIT License")
+                url.set("https://opensource.org/licenses/MIT")
             }
+        }
+        developers {
+            developer {
+                id.set("its-hazratbilal")
+                name.set("Hazrat Bilal")
+                url.set("https://hazratbilal.com")
+            }
+        }
+        scm {
+            url.set("https://github.com/its-hazratbilal/android-ai-kit")
+            connection.set("scm:git:https://github.com/its-hazratbilal/android-ai-kit.git")
+            developerConnection.set("scm:git:ssh://git@github.com/its-hazratbilal/android-ai-kit.git")
         }
     }
 }

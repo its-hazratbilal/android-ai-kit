@@ -1,8 +1,6 @@
-import org.gradle.api.publish.maven.MavenPublication
-
 plugins {
     alias(libs.plugins.android.library)
-    id("maven-publish")
+    alias(libs.plugins.maven.publish)
 }
 
 android {
@@ -37,13 +35,36 @@ android {
 
 }
 
-afterEvaluate {
-    publishing {
-        publications {
-            register<MavenPublication>("release") {
-                artifactId = "android-ai-kit-chat"
-                from(components["release"])
+mavenPublishing {
+    publishToMavenCentral()
+    signAllPublications()
+
+    coordinates(
+        project.group.toString(),
+        "android-ai-kit-chat"
+    )
+
+    pom {
+        name.set("AiKit Chat")
+        description.set("Streaming chat API for AiKit. Provides a coroutine-based interface for token streaming using models loaded with AiKit Core.")
+        url.set("https://github.com/its-hazratbilal/android-ai-kit")
+        licenses {
+            license {
+                name.set("MIT License")
+                url.set("https://opensource.org/licenses/MIT")
             }
+        }
+        developers {
+            developer {
+                id.set("its-hazratbilal")
+                name.set("Hazrat Bilal")
+                url.set("https://hazratbilal.com")
+            }
+        }
+        scm {
+            url.set("https://github.com/its-hazratbilal/android-ai-kit")
+            connection.set("scm:git:https://github.com/its-hazratbilal/android-ai-kit.git")
+            developerConnection.set("scm:git:ssh://git@github.com/its-hazratbilal/android-ai-kit.git")
         }
     }
 }
