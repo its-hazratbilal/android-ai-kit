@@ -194,15 +194,19 @@ AiKit focuses solely on on-device LLM inference. Conversation history, prompt ma
 
 ## 🚀 Getting Started
 
-### Add the dependencies
+### Core (Model Loading)
 
 ```kotlin
-// app/build.gradle.kts
-dependencies {
-    implementation("io.github.its-hazratbilal:android-ai-kit-core:1.0.0")
-    implementation("io.github.its-hazratbilal:android-ai-kit-chat:1.0.0")
-}
+implementation("io.github.its-hazratbilal:android-ai-kit-core:1.0.0")
 ```
+
+### Chat API
+
+```kotlin
+implementation("io.github.its-hazratbilal:android-ai-kit-chat:1.0.0")
+```
+
+> `android-ai-kit-chat` transitively includes `android-ai-kit-core` — if you're using chat, you only need to declare the chat dependency. Add `android-ai-kit-core` on its own only if you need model loading without the chat API.
 
 ### Required app-level packaging config
 
