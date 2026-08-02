@@ -26,13 +26,6 @@ android {
             jvmTarget.set(org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_17)
         }
     }
-
-    publishing {
-        singleVariant("release") {
-            withSourcesJar()
-        }
-    }
-
 }
 
 mavenPublishing {
