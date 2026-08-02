@@ -92,7 +92,7 @@ https://github.com/user-attachments/assets/6a5c9910-5d62-407f-bd7e-3d5162afe8b6
 | `android-ai-kit-rag` *(planned)* | Retrieval-augmented generation — embeddings + vector search |
 | `android-ai-kit-vision` *(planned)* | Multimodal / image-input support |
 
-Each capability module depends only on `core` — add just what your app needs.
+Each capability module depends only on `core` and exposes it transitively — so adding just the capability module you need (e.g. `android-ai-kit-chat`) is enough; you don't need to add `core` separately unless you want model loading without any capability module on top.
 
 ---
 
