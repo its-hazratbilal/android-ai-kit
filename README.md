@@ -79,7 +79,7 @@ https://github.com/user-attachments/assets/6a5c9910-5d62-407f-bd7e-3d5162afe8b6
 - 🎯 **Minimal public API** — call to load a model and start chatting
 - 🔄 **Streaming-first** — token-by-token callbacks for real-time UI updates
 - 🔧 **DI-framework agnostic** — no Hilt/Koin forced on consumers; plain constructors and factory methods
-- 📦 **Distributed via JitPack** — no manual AAR wrangling
+- 📦 **Published on Maven Central** — simple dependency management with Gradle
 
 ---
 
@@ -106,7 +106,7 @@ Each capability module depends only on `core` — add just what your app needs.
 | C++ / JNI | Native AI integration |
 | GGUF Models | Quantized on-device AI models |
 | Gradle Multi-Module | `core` / `chat` modular publishing |
-| JitPack | Distribution |
+| Maven Central | Library distribution |
 
 ---
 
@@ -194,26 +194,13 @@ AiKit focuses solely on on-device LLM inference. Conversation history, prompt ma
 
 ## 🚀 Getting Started
 
-### Add JitPack to your repositories
-
-```kotlin
-// settings.gradle.kts
-dependencyResolutionManagement {
-    repositories {
-        google()
-        mavenCentral()
-        maven { url = uri("https://jitpack.io") }
-    }
-}
-```
-
 ### Add the dependencies
 
 ```kotlin
 // app/build.gradle.kts
 dependencies {
-    implementation("com.github.its-hazratbilal:android-ai-kit-core:1.0.0")
-    implementation("com.github.its-hazratbilal:android-ai-kit-chat:1.0.0")
+    implementation("io.github.its-hazratbilal:android-ai-kit-core:1.0.0")
+    implementation("io.github.its-hazratbilal:android-ai-kit-chat:1.0.0")
 }
 ```
 
@@ -313,7 +300,6 @@ AiKit works with **GGUF models supported by `llama.cpp`**, including:
 - [x] `chat` — streaming chat API
 - [ ] `rag` — retrieval-augmented generation
 - [ ] `vision` — multimodal / image input
-- [ ] Maven Central distribution
 - [ ] KMP support (Android + Desktop)
 
 ---
