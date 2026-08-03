@@ -48,7 +48,7 @@ android {
 }
 
 dependencies {
-    implementation(project(":core"))
+    // Chat module already includes Core transitively
     implementation(project(":chat"))
 
     implementation(platform(libs.androidx.compose.bom))
