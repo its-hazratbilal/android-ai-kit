@@ -9,6 +9,7 @@
 <br>
 
 <p align="center">
+  <img src="https://img.shields.io/maven-central/v/io.github.its-hazratbilal/android-ai-kit-core?style=for-the-badge&label=Maven%20Central"/>  
   <img src="https://img.shields.io/github/stars/its-hazratbilal/android-ai-kit?style=for-the-badge"/>
   <img src="https://img.shields.io/github/license/its-hazratbilal/android-ai-kit?style=for-the-badge"/>
   <img src="https://img.shields.io/github/last-commit/its-hazratbilal/android-ai-kit?style=for-the-badge"/>
@@ -54,7 +55,9 @@
 
 It's extracted from [Offline AI Assistant](https://github.com/its-hazratbilal/offline-ai-assistant), a production Android app that runs GGUF-based Large Language Models (LLMs) entirely on-device. It has been repackaged as a standalone, reusable library, enabling Android developers to integrate on-device LLM inference into their apps without writing JNI code, managing llama.cpp's lifecycle, or handling native backend loading.
 
-Every inference runs **entirely on-device**. No network calls, no API keys, no data leaving the phone.
+Every inference runs **entirely on-device**. No network calls, no API keys, and no data leaves the device.
+
+AiKit is published on **Maven Central**, making it easy to integrate into any Android project using Gradle.
 
 ---
 
@@ -196,15 +199,19 @@ AiKit focuses solely on on-device LLM inference. Conversation history, prompt ma
 
 ## 🚀 Getting Started
 
-### Add the dependencies
+### Core
 
 ```kotlin
-// app/build.gradle.kts
-dependencies {
-    implementation("io.github.its-hazratbilal:android-ai-kit-core:1.0.0")
-    implementation("io.github.its-hazratbilal:android-ai-kit-chat:1.0.0")
-}
+implementation("io.github.its-hazratbilal:android-ai-kit-core:1.0.0")
 ```
+
+### Chat API (includes Core)
+
+```kotlin
+implementation("io.github.its-hazratbilal:android-ai-kit-chat:1.0.0")
+```
+
+> **Note:** `android-ai-kit-chat` already includes `android-ai-kit-core` transitively. Add `android-ai-kit-core` separately only if you need the core APIs without the chat module.
 
 ### Required app-level packaging config
 
