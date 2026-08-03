@@ -1,10 +1,12 @@
 <h1 align="center">🧩 AiKit — On-Device LLM Library for Android</h1>
 
+<br>
+
 <p align="center">
-  <br>
   <img src="./screenshots/logo.png" width="150" alt="AiKit Logo"/>
-  <br>
 </p>
+
+<br>
 
 <p align="center">
   <img src="https://img.shields.io/github/stars/its-hazratbilal/android-ai-kit?style=for-the-badge"/>
