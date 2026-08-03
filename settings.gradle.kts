@@ -22,7 +22,7 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "AndroidAiKit"
+rootProject.name = "AiKit"
 include(":sample")
 include(":core")
 include(":chat")
