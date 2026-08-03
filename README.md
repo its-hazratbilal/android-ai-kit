@@ -309,7 +309,7 @@ AiKit works with **GGUF models supported by `llama.cpp`**, including:
 - [x] `chat` — streaming chat API
 - [ ] `rag` — retrieval-augmented generation
 - [ ] `vision` — multimodal / image input
-- [ ] KMP support (Android + Desktop)
+- [ ] Kotlin Multiplatform support (Android + Desktop)
 
 ---
 
