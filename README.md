@@ -229,6 +229,24 @@ android {
 
 ---
 
+## 📥 Download a GGUF Model
+
+Android AiKit works with GGUF language models.
+
+### ⭐ Recommended
+
+**Google Gemma 3 1B Instruct (Q4_K_M)**
+
+👉 https://huggingface.co/bartowski/google_gemma-3-1b-it-GGUF
+
+### 🔍 Explore More Models
+
+Browse thousands of GGUF models on Hugging Face:
+
+👉 https://huggingface.co/models?library=gguf
+
+---
+
 ## 💬 Usage
 
 ### Load a model
