@@ -41,6 +41,7 @@
 - [🧠 Architecture](#-architecture)
 - [📂 Project Structure](#-project-structure)
 - [🚀 Getting Started](#-getting-started)
+- [📥 Download a GGUF Model](#-download-a-gguf-model)
 - [💬 Usage](#-usage)
 - [📱 Requirements](#-requirements)
 - [🗺️ Roadmap](#️-roadmap)
