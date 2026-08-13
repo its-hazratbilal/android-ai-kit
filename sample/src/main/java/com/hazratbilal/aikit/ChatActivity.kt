@@ -61,7 +61,7 @@ import com.hazratbilal.aikit.ui.theme.AndroidAiKitTheme
 import com.mikepenz.markdown.m3.Markdown
 import com.mikepenz.markdown.m3.markdownColor
 
-class MainActivity : ComponentActivity() {
+class ChatActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
